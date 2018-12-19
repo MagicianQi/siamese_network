@@ -11,15 +11,10 @@
 
 ## Data
 
-数据集为应为一对图像。若为一类图像，那么标签为1，若不是一类图像，那么标签为0。
+* 对比损失 ：数据集为应为一对图像。
+* Triplet Loss ：需要输入为3个样本，img1为样本图像、img2为same图像、img3为different图像。
 
 具体实现见：/utils/siamese_image_floder.py
-
-## 损失函数
-
-损失函数为对比损失。若标签为1，那么损失值为欧式距离，若不是一类图像，那么损失值为(margin - 欧式距离)。
-
-具体实现见：/utils/contrastive.py
 
 ## How to use
 
