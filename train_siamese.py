@@ -14,12 +14,12 @@ from utils.contrastive import ContrastiveLoss
 
 # --------------------路径参数--------------------
 
-# train_data_path = "/home/datasets/qishuo/siamese/train/"
-# val_data_path = "/home/datasets/qishuo/siamese/val/"
-# negtive_path = "/home/datasets/qishuo/siamese/negtive/"
-train_data_path = "/Users/qs/PycharmProjects/siamese/imgs/"
-val_data_path = "/Users/qs/PycharmProjects/siamese/val/"
-negtive_path = "/Users/qs/PycharmProjects/siamese/selfie/"
+train_data_path = "/home/datasets/qishuo/siamese/train/"
+val_data_path = "/home/datasets/qishuo/siamese/val/"
+negtive_path = "/home/datasets/qishuo/siamese/negtive/"
+# train_data_path = "/Users/qs/PycharmProjects/siamese/bad_imgs/"
+# val_data_path = "/Users/qs/PycharmProjects/siamese/bad_imgs/"
+# negtive_path = "/Users/qs/PycharmProjects/siamese/selfie/"
 train_batch_size = 10
 val_batch_size = 2
 num_epochs = 1
@@ -67,6 +67,8 @@ dataLoader_val = torch.utils.data.DataLoader(datasets_val,
 device = torch.device(GPU_id if torch.cuda.is_available() else "cpu")
 train_size = len(datasets_train)
 val_size = len(datasets_val)
+print(train_size)
+print(val_size)
 
 # --------------------模型--------------------
 

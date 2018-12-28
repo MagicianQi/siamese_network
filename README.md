@@ -11,10 +11,11 @@
 
 ## Data
 
-* 对比损失 ：数据集为应为一对图像。
-* Triplet Loss ：需要输入为3个样本，img1为样本图像、img2为same图像、img3为different图像。
 
-具体实现见：/utils/siamese_image_floder.py
+
+## 损失函数
+
+
 
 ## How to use
 

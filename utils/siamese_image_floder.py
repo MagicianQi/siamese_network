@@ -61,17 +61,14 @@ class SiameseImageTripletFloder(data.Dataset):
         for i in range(len(p_img_list)):
             for j in range(len(p_img_list[i:])):
                 img_pairs_list.append([p_img_list[i], p_img_list[i+j]])
-        print("1    " + str(len(img_pairs_list)))
-
+        
         while len(n_img_list) < len(img_pairs_list):
             n_img_list = n_img_list + n_img_list
         n_img_list = random.sample(n_img_list, len(img_pairs_list))
-        print("2    " + str(len(img_pairs_list)))
 
         for k in range(len(img_pairs_list)):
             img_pairs_list[k].append(n_img_list[k])
-        print("3    " + str(len(img_pairs_list)))
-        
+
         self.img_pairs_list = img_pairs_list
         self.transform = transform
         self.loader = loader
